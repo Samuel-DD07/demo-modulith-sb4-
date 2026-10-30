@@ -1,27 +1,36 @@
 package com.formation.shop.catalog.internal;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.Getter;
 
+@Entity
 public class CoffeeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Getter
-    private long id;
-
-    @Getter
+    private Long id;
     private String name;
     private int price;
 
-    public CoffeeEntity(String name, int price)
-    {
+    protected CoffeeEntity() {
+    }
+
+    public CoffeeEntity(String name, int price) {
         this.name = name;
         this.price = price;
     }
 
-    protected CoffeeEntity()
-    {};
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getPrice() {
+        return price;
+    }
 }

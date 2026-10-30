@@ -1,4 +1,4 @@
-package com.example.demomodulithsb4;
+package com.formation.shop;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
